@@ -30,7 +30,7 @@ before_install:
  - sudo gem install oneops-admin-1.0.0.gem
  - cd ..
  
-install: chef exec bundle install --jobs=3 --retry=3 --without='vagrant'
+#install: chef exec bundle install --jobs=3 --retry=3 --without='vagrant'
 
 # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
 before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
