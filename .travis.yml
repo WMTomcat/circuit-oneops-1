@@ -10,8 +10,13 @@ env:
 
 before_install:
  - curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.18.30
+ - git clone https://github.com/oneops/inductor.git
+ - cd inductor
+ - mvn clean package
+ - cd ..
  - git clone https://github.com/oneops/oneops-admin.git
  - cd oneops-admin
+ - mkdir target ; cp ../inductor/target/inductor-1.1.0.jar target/
  - gem build oneops-admin.gemspec
  - gem install oneops-admin-1.0.0.gem
  - cd ..
