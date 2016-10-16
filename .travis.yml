@@ -28,8 +28,9 @@ before_install:
  - mkdir target ; cp ../inductor/target/inductor-1.1.0.jar target/
  - sudo gem build oneops-admin.gemspec
  - cd ..
- - sudo gem install -g oneops-admin/oneops-admin-1.0.0.gem
+ - sudo gem install oneops-admin/oneops-admin-1.0.0.gem
  - cd ..
+ - bundle config local.oneops-admin oneops-admin
  - bundle install
  
 install: chef exec bundle install --jobs=3 --retry=3 --without='vagrant'
