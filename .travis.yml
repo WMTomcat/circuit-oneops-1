@@ -28,7 +28,7 @@ before_install:
  - mkdir target ; cp ../inductor/target/inductor-1.1.0.jar target/
  - sudo gem build oneops-admin.gemspec
  - cd ..
- - sudo gem install oneops-admin/oneops-admin-1.0.0.gem
+ - sudo gem install -g oneops-admin/oneops-admin-1.0.0.gem
  - cd ..
  - bundle install
  
