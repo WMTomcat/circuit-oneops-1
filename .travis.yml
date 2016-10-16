@@ -8,6 +8,8 @@ env:
   - INSTANCE=default-centos-71
 
 before_install:
+ - sudo apt-get -qq update
+ - sudo apt-get install -y ruby1.9.1-dev
  - curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.18.30
  - git clone https://github.com/oneops/cmsdal.git
  - cd cmsdal
