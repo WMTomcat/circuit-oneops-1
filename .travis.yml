@@ -5,11 +5,18 @@ services: docker
 
 env:
   matrix:
-  - INSTANCE=default-ubuntu-1404
-  - INSTANCE=default-centos-66
+  - INSTANCE=default-centos-71
 
 before_install:
  - curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.18.30
+ - git clone https://github.com/oneops/cmsdal.git
+ - cd cmsdal
+ - mvn clean package install
+ - cd ..
+ - git clone https://github.com/oneops/oo-commons.git
+ - cd oo-commons
+ - mvn clean package install
+ - cd ..
  - git clone https://github.com/oneops/inductor.git
  - cd inductor
  - mvn clean package
