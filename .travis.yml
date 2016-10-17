@@ -5,7 +5,7 @@ services: docker
 
 env:
   matrix:
-  - INSTANCE=default-centos-71
+  - INSTANCE=centos-71
 
 before_install:
  - sudo apt-get -qq update
