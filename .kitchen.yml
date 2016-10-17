@@ -12,4 +12,4 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[Tomcat-85::add]
+      - recipe[tomcat-85::add]
