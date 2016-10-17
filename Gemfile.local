@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake', '~> 11.3'
+gem 'berkshelf'
 
 group :integration do
   gem 'test-kitchen', '1.13.2'
