@@ -1,7 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'oneops-admin', '1.0.0',path: 'oneops-admin'
-
 group :integration do
   gem 'test-kitchen', '= 1.0.0.beta.3'
 end
