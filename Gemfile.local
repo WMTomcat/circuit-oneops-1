@@ -1,10 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'oneops-admin', '1.0.0',path: 'oneops-admin'
-gem 'net-ssh', '>=2.9.4'
 
 group :integration do
-  gem 'test-kitchen', '~> 1.13'
+  gem 'test-kitchen', '= 1.0.0.beta.3'
 end
 
 group :docker do
