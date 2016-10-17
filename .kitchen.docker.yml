@@ -4,4 +4,4 @@ driver:
   privileged: true
 platforms:  
 - name: centos-7.1
-run_list: recipe[tomcat-85::add] 
+run_list: recipe[tomcat-85:add] 
