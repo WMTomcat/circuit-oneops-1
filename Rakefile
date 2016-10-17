@@ -11,7 +11,7 @@
 #
 
 require 'bundler/setup'
-
+namespace :integration do
   desc 'Run integration tests with kitchen-docker'
   task :docker, [:instance] do |_t, args|
     args.with_defaults(instance: 'default-centos-71')
@@ -22,5 +22,6 @@ require 'bundler/setup'
     # Travis CI Docker service does not support destroy:
     instances.get(args.instance).verify
   end
+end
 
 task default: %w(integration:docker)
