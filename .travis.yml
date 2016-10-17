@@ -31,7 +31,7 @@ before_install:
  - cd ..
  - sudo gem install oneops-admin/oneops-admin-1.0.0.gem
  - pwd
- - echo `source 'http://rubygems.org'\ngem 'oneops-admin', '1.0.0',path: 'oneops-admin/oneops-admin-1.0.0.gem'` > Gemfile
+ - cp Gemfile.local Gemfile
  
 install: chef exec bundle install --jobs=3 --retry=3 --without='vagrant'
 
