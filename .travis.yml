@@ -61,7 +61,6 @@ script:
 - travis_retry chef exec bundle exec rake integration:docker[${INSTANCE}]
 - chef exec bundle exec kitchen verify ${INSTANCE}
 
-
 matrix:
   include:
     - before_script:
