@@ -6,7 +6,6 @@
 #
 # $ rake -T
 # rake integration:docker[instance] # Run integration tests with kitchen-docker
-# rake integration:vagrant          # Run integration tests with kitchen-vagrant
 #
 # More info at https://github.com/ruby/rake/blob/master/doc/rakefile.rdoc
 #
@@ -15,7 +14,7 @@ require 'bundler/setup'
 
   desc 'Run integration tests with kitchen-docker'
   task :docker, [:instance] do |_t, args|
-    args.with_defaults(instance: 'default-ubuntu-1404')
+    args.with_defaults(instance: 'default-centos-71')
     require 'kitchen'
     Kitchen.logger = Kitchen.default_file_logger
     loader = Kitchen::Loader::YAML.new(local_config: '.kitchen.docker.yml')
@@ -23,6 +22,5 @@ require 'bundler/setup'
     # Travis CI Docker service does not support destroy:
     instances.get(args.instance).verify
   end
-end
 
 task default: %w(integration:docker)
