@@ -5,4 +5,4 @@
 source 'https://supermarket.chef.io'
 
 metadata
-cookbook 'Tomcat-85', path: './components/cookbooks/tomcat-85'
+cookbook 'tomcat-85', path: './components/cookbooks/tomcat-85'
