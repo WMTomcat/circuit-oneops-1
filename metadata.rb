@@ -1,0 +1,11 @@
+name             'tomcat-85 cookbook'
+maintainer       'Brett Bourquin'
+maintainer_email 'brett@bourqu.in'
+license          'Apache 2.0'
+description      'Installs and Configures Tomcat 8.5'
+source_url       'https://github.com/WMTomcat/circuit-oneops-1/'
+issues_url       'https://github.com/WMTomcat/circuit-oneops-1/'
+chef_version     '>= 12.1'
+version          '0.0.1'
+
+supports 'centos'
