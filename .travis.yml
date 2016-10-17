@@ -22,7 +22,6 @@ services: docker
 
 env:
   matrix:
-    #  - INSTANCE=default-centos-6 Disable until we upgrade chef in the omnibus package
   - INSTANCE=default-centos-7
 
 before_install:
