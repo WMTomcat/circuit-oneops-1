@@ -6,7 +6,7 @@ driver:
 provisioner:
   name: chef_solo
   cookbooks_path:
-    - ../components/cookbooks
+    - components/cookbooks
 
 platforms:  
 - name: centos-7
