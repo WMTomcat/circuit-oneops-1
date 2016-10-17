@@ -3,5 +3,15 @@ driver:
   name: docker
   privileged: true
 platforms:  
-- name: centos-7.1
-run_list: recipe[tomcat-85:add] 
+- name: centos-7
+  driver:
+    image: centos:7
+    platform: rhel
+    pid_one_command: /usr/lib/systemd/systemd
+    intermediate_instructions:
+      - RUN yum -y install lsof which systemd-sysv initscripts
+      
+suites:
+  - name: default
+    run_list:
+      - recipe[tomcat-85::add]
