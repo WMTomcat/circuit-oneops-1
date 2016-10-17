@@ -16,7 +16,7 @@ install: echo "skip bundle install"
 
 branches:
   only:
-    - master
+    - test-kitchen
 
 services: docker
 
