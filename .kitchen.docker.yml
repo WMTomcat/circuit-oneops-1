@@ -2,6 +2,12 @@
 driver:
   name: docker
   privileged: true
+
+provisioner:
+  name: chef_solo
+  cookbooks_path:
+    - components/cookbooks
+
 platforms:  
 - name: centos-7
   driver:
